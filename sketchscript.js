@@ -1,9 +1,17 @@
 //make a grid on the screen
 //find the container
+let yourNum = prompt('how many rows?');
+console.log(yourNum);
+let gridRow = '';
+for (n=0; n < yourNum; n++) {
+    gridRow= gridRow + "auto ";
+}
+console.log(gridRow);
 let container = document.querySelector('.container');
-container.style.gridTemplateColumns = "auto auto auto auto";
+container.style.gridTemplateColumns = gridRow;
+container.style.gridTemplateRows= gridRow;
 let item = null;
-for (i=0; i <12; i++) {
+for (i=0; i < (yourNum * yourNum); i++) {
     item = document.createElement('div' + i);
     item.style.border="solid";
     item.style.width="50px";
