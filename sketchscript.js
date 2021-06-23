@@ -1,8 +1,9 @@
 //make a grid on the screen
 //ask how big the screen will be
-let yourNum = prompt('how many rows?');
+//let yourNum = prompt('how many rows?');
+let yourNum=16;
 console.log(yourNum);
-if (yourNum < 11) {
+if (yourNum < 100) {
 let gridRow = '';
 //set the number of template rows IAW user request
 for (n=0; n < yourNum; n++) {
