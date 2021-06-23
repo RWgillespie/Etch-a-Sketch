@@ -1,15 +1,18 @@
 //make a grid on the screen
-//find the container
+//ask how big the screen will be
 let yourNum = prompt('how many rows?');
 console.log(yourNum);
+if (yourNum < 11) {
 let gridRow = '';
+//set the number of template rows IAW user request
 for (n=0; n < yourNum; n++) {
     gridRow= gridRow + "auto ";
 }
-console.log(gridRow);
+//seeting the container width
 let gridWidth = (yourNum * 50) + "px";
+//finding the container
 let container = document.querySelector('.container');
-//set the grid to the size you have input
+//set the grid size and then shrink the div to that size, and make the squares white
 container.style.gridTemplateColumns = gridRow;
 container.style.gridTemplateRows= gridRow;
 container.style.width= gridWidth;
@@ -23,6 +26,9 @@ for (i=0; i < (yourNum * yourNum); i++) {
     item.style.height="50px";
     container.appendChild(item);
 }
+//set a function that turns the squares red when you overlay them
 container.addEventListener('mouseover', function(e){
-    e.target.style.backgroundColor="red";
+     e.target.style.backgroundColor="red";
 })
+
+} else {alert("Your number is too big. Please refresh");}
