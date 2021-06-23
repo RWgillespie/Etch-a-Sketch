@@ -33,3 +33,6 @@ container.addEventListener('mouseover', function(e){
 })
 
 } else {alert("Your number is too big. Please refresh");}
+
+
+const buttons = document.getElementById('bigredbutton');
