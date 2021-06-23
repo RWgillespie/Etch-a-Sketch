@@ -9,3 +9,8 @@
 #main {
     background-color: black;
 }
+#titlePage {
+    color: white;
+    text-align: center;
+    font-family: 'tahoma';
+}
