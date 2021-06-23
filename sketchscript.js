@@ -13,11 +13,12 @@ let container = document.querySelector('.container');
 container.style.gridTemplateColumns = gridRow;
 container.style.gridTemplateRows= gridRow;
 container.style.width= gridWidth;
+container.style.backgroundColor="white";
 let item = null;
 //fill the grid with little squares to make a perfect square
 for (i=0; i < (yourNum * yourNum); i++) {
     item = document.createElement('div' + i);
-    item.style.border="solid";
+    //item.style.border="solid";
     item.style.width="50px";
     item.style.height="50px";
     container.appendChild(item);
